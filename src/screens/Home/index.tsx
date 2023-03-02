@@ -6,10 +6,12 @@ import { NavigateProps } from 'src/routes/types';
 export const Home = () => {
   const navigation = useNavigation<NavigateProps>();
 
+  const handleNavigate = () => navigation.navigate('Login');
+
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <TouchableOpacity onPress={() => navigation.navigate('Home')}>
-        <Text>Login</Text>
+      <TouchableOpacity onPress={handleNavigate}>
+        <Text>Home 1</Text>
       </TouchableOpacity>
     </View>
   );

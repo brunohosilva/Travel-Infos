@@ -9,12 +9,7 @@ const Stack = createStackNavigator<RootStackParamList>();
 
 function StackRouter() {
   return (
-    <Stack.Navigator
-      initialRouteName='Login'
-      screenOptions={{
-        headerShown: false,
-      }}
-    >
+    <Stack.Navigator>
       <Stack.Screen name='Login' component={Login} />
       <Stack.Screen name='Home' component={Home} />
     </Stack.Navigator>
