@@ -1,8 +1,8 @@
-import {StackNavigationProp} from '@react-navigation/stack';
+import { StackNavigationProp } from '@react-navigation/stack';
 
 export type RootStackParamList = {
-  SignIn: undefined;
-  Dashboard: undefined;
+  Home: undefined;
+  Login: undefined;
 };
 
 export type NavigateProps = StackNavigationProp<RootStackParamList>;
