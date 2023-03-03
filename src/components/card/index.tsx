@@ -17,7 +17,21 @@ import {
   Row,
 } from './styles';
 
-export const Card = () => {
+type ICardProps = {
+  image: any;
+  name: string;
+  description: string;
+  capital: string;
+  coin: string;
+};
+
+export const Card = ({
+  description,
+  image,
+  name,
+  capital,
+  coin,
+}: ICardProps) => {
   const navigation = useNavigation<NavigateProps>();
 
   const [isFav, setIsFav] = useState<Boolean>(false);
@@ -34,7 +48,7 @@ export const Card = () => {
   return (
     <Container>
       <ImageBackgoundContainer
-        source={require('../../assets/exemplo.jpeg')}
+        source={image}
         imageStyle={{ borderRadius: 30, opacity: 0.7 }}
       >
         <ContainerContent>
@@ -42,7 +56,7 @@ export const Card = () => {
             <LineTopRow>
               <View>
                 <Font20Bold>Moeda local</Font20Bold>
-                <Font16>Baht tailandês</Font16>
+                <Font16>{coin}</Font16>
               </View>
               <TouchableOpacity onPress={handleSetFavorite}>
                 <Image
@@ -54,8 +68,8 @@ export const Card = () => {
           </Flex1>
           <ContaineBottom>
             <View>
-              <Font40Bold>Tailandia</Font40Bold>
-              <Font22>Bangkok</Font22>
+              <Font40Bold>{name}</Font40Bold>
+              <Font22>{capital}</Font22>
             </View>
             <TouchableOpacity onPress={handleNavigate}>
               <Image

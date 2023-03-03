@@ -1,13 +1,13 @@
 import styled from 'styled-components/native'
 
 export const Container = styled.View`
-  height: 45%;
   border-radius: 30px;
   margin-top: 30px;
   shadow-color: #000;
   shadow-opacity: 0.37;
   shadow-radius: 7.49px;
   elevation: 12;
+  height: 250px;
 `;
 
 export const ImageBackgoundContainer = styled.ImageBackground`
