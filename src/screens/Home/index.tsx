@@ -1,18 +1,16 @@
-import { useNavigation } from '@react-navigation/native';
 import React from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity, SafeAreaView } from 'react-native';
 import { NavigateProps } from 'src/routes/types';
+import { Card } from '../../components/card';
+import { Font30, SafeArea, Container } from './styles';
 
 export const Home = () => {
-  const navigation = useNavigation<NavigateProps>();
-
-  const handleNavigate = () => navigation.navigate('Login');
-
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <TouchableOpacity onPress={handleNavigate}>
-        <Text>Home 1</Text>
-      </TouchableOpacity>
-    </View>
+    <SafeArea>
+      <Container>
+        <Font30>{`Procure seu\nlugar favorito`}</Font30>
+        <Card />
+      </Container>
+    </SafeArea>
   );
 };
