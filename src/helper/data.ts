@@ -2,6 +2,7 @@ export const countryData = {
     data: [
         {
             id: 1,
+            continent: 'Asian',
             name: 'Japão',
             coin: 'Lene japones',
             capital: 'Tóquio',
@@ -10,6 +11,7 @@ export const countryData = {
         },
         {
             id: 2,
+            continent: 'European',
             name: 'Espanha',
             coin: 'Euro',
             capital: 'Madrid',
@@ -18,6 +20,7 @@ export const countryData = {
         },
         {
             id: 3,
+            continent: 'African',
             name: 'África do sul ',
             coin: 'Rand sul-africano',
             capital: 'Cidade do cabo',
@@ -26,11 +29,33 @@ export const countryData = {
         },
         {
             id: 4,
+            continent: 'North-American',
             name: 'México',
             coin: 'Peso mexicano',
             capital: 'Cidade do México',
             image: require('../assets/mexico.jpeg'),
             description: `O México possui um dos maiores parques fabris da América, além disso, é um dos principais centros do turismo mundial. O território mexicano possui belas paisagens naturais, um vasto litoral e praias de clima tropical.\n\nÉ um dos países mais populosos do mundo e um dos principais atores geopolíticos da América.\n\nPossui cerca de 126 milhões de habitantes.\n\nUm dos principais pontos turísticos é a Basílica de Guadalupe, sendo a igreja mais importante do México. Além disso, é a mais visitada nas Américas e a segunda mais visitada no mundo.`
+        }
+    ]
+}
+
+export const continentData = {
+    data: [
+        {
+            id: 1,
+            continent: 'Asian',
+        },
+        {
+            id: 2,
+            continent: 'European',
+        },
+        {
+            id: 3,
+            continent: 'African',
+        },
+        {
+            id: 4,
+            continent: 'North-American',
         }
     ]
 }
