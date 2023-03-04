@@ -28,10 +28,9 @@ export const Home = () => {
                 coin={item.coin}
               />
             )}
-            // keyExtractor={(item) => item.id}
+            keyExtractor={(item) => item.id}
           />
         </View>
-        {/* <Card /> */}
       </Container>
     </SafeArea>
   );

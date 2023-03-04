@@ -1,11 +1,11 @@
 import React from 'react';
 import { View, Text, SafeAreaView } from 'react-native';
 
-export const CountryInfo = () => {
+export const CountryInfo = ({ route }: any) => {
   return (
     <SafeAreaView>
       <View>
-        <Text>Tela de informaçao asdasd asd </Text>
+        <Text>{route.params.description}</Text>
       </View>
     </SafeAreaView>
   );
