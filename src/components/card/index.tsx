@@ -43,9 +43,11 @@ export const Card = ({
       ? require('../../assets/heart-on.png')
       : require('../../assets/heart-off.png');
 
-  const handleNavigate = (data: string) =>
+  const handleNavigate = (description: string, image: any, name: string) =>
     navigation.navigate('CountryInfo', {
-      description: data,
+      description,
+      image,
+      name,
     });
 
   return (
@@ -85,7 +87,9 @@ export const Card = ({
                 <Font22>{capital}</Font22>
               </View>
             </View>
-            <TouchableOpacity onPress={() => handleNavigate(description)}>
+            <TouchableOpacity
+              onPress={() => handleNavigate(description, image, name)}
+            >
               <Image
                 source={require('../../assets/arrow-right.png')}
                 style={{ width: 50, height: 50 }}

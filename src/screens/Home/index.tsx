@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import { NavigateProps } from 'src/routes/types';
 import { Card } from '../../components/card';
-import { Font30, SafeArea, Container } from './styles';
+import { SafeArea, Container } from './styles';
 import { countryData } from '../../helper/data';
 
 export const Home = () => {
@@ -16,7 +16,6 @@ export const Home = () => {
     <SafeArea>
       <Container>
         <View style={{ flex: 1 }}>
-          <Font30>{`Procure seu\nlugar favorito`}</Font30>
           <FlatList
             data={countryData.data}
             renderItem={({ item }) => (

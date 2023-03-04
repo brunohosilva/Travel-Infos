@@ -9,13 +9,17 @@ const Stack = createStackNavigator<RootStackParamList>();
 
 function StackRouter() {
   return (
-    <Stack.Navigator
-      screenOptions={{
-        headerShown: false,
-      }}
-    >
-      <Stack.Screen name='Home' component={Home} />
-      <Stack.Screen name='CountryInfo' component={CountryInfo} />
+    <Stack.Navigator>
+      <Stack.Screen
+        name='Home'
+        component={Home}
+        options={{ title: 'Lista de Países' }}
+      />
+      <Stack.Screen
+        name='CountryInfo'
+        component={CountryInfo}
+        options={({ route }) => ({ title: route.params.name })}
+      />
     </Stack.Navigator>
   );
 }
